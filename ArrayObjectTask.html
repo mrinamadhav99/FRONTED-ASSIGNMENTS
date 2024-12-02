@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Information</title>
+</head>
+<body>
+    <Script>
+        let emps = [
+    {id: 1, name: "Amit", post: "Manager", salary: 160000, gender: "Male", age: 58, city: "Chennai", state: "Tamil Nadu"},
+    {id: 2, name: "Riya", post: "Team Lead", salary: 95000, gender: "Female", age: 36, city: "Coimbatore", state: "Tamil Nadu"},
+    {id: 3, name: "Vikram", post: "Developer", salary: 85000, gender: "Male", age: 32, city: "Hyderabad", state: "Telangana"},
+    {id: 4, name: "Priya", post: "Java Developer", salary: 110000, gender: "Female", age: 60, city: "Bangalore", state: "Karnataka"},
+    {id: 5, name: "Nisha", post: "Manager", salary: 150000, gender: "Female", age: 57, city: "Mumbai", state: "Maharashtra"},
+    {id: 6, name: "Rajesh", post: "Team Lead", salary: 92000, gender: "Male", age: 52, city: "Tirupati", state: "Andhra Pradesh"},
+    {id: 7, name: "Karthik", post: "Testing Engineer", salary: 75000, gender: "Male", age: 40, city: "Chennai", state: "Tamil Nadu"},
+    {id: 8, name: "Meera", post: "Project Lead", salary: 105000, gender: "Female", age: 42, city: "Erode", state: "Tamil Nadu"},
+    {id: 9, name: "Ajay", post: "Manager", salary: 150000, gender: "Male", age: 56, city: "Trisur", state: "Kerala"},
+    {id: 10, name: "Deepa", post: "Admin", salary: 125000, gender: "Female", age: 48, city: "Mangalore", state: "Karnataka"}
+];
+document.write("<hr>");
+        document.write("<b><u>Employee Details:</u></b><br><br>");
+        for(let e of emps){
+           document.write(`Id: ${e.id} Name: ${e.name} Post: ${e.post} Salary: ${e.salary} Gender: ${e.gender} Age: ${e.age} City: ${e.city} State: ${e.state}<br><br>`);
+
+        }
+        document.write("<hr>");
+        document.write("<b><u>Employee Details who are Manager:</u></b><br><br>");
+        for(let e of emps){
+            if(e.post=="Manager"){
+           document.write(`Id: ${e.id} Name: ${e.name} Post: ${e.post} Salary: ${e.salary} Gender: ${e.gender} Age: ${e.age} City: ${e.city} State: ${e.state}<br><br>`);
+            }
+        }
+        document.write("<hr>");
+        document.write("<b><u>Employee Details who are Female:</u></b><br><br>");
+        for(let e of emps){
+            if(e.gender=="Female"){
+           document.write(`Id: ${e.id} Name: ${e.name} Post: ${e.post} Salary: ${e.salary} Gender: ${e.gender} Age: ${e.age} City: ${e.city} State: ${e.state}<br><br>`);
+            }
+        }
+        document.write("<hr>");
+        document.write("<b><u>Employee Details whose age greater than 55:</u></b><br><br>");
+        for(let e of emps){
+            if(e.age>55){
+           document.write(`Id: ${e.id} Name: ${e.name} Post: ${e.post} Salary: ${e.salary} Gender: ${e.gender} Age: ${e.age} City: ${e.city} State: ${e.state}<br><br>`);
+            }
+        }
+        document.write("<hr>");
+        document.write("<b><u>Employee Details who belongs to Tamil Nadu:</u></b><br><br>");
+        for(let e of emps){
+            if(e.state=="Tamil Nadu"){
+           document.write(`Id: ${e.id} Name: ${e.name} Post: ${e.post} Salary: ${e.salary} Gender: ${e.gender} Age: ${e.age} City: ${e.city} State: ${e.state}<br><br>`);
+            }
+        }
+    </Script>
+</body>
+</html>

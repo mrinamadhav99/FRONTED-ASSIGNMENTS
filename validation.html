@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="./validation.js"></script>
+    <title>Form for Validation</title>
+</head>
+<body>
+    <div>
+        <table>
+            <form name="myform" onsubmit="return checkData()">
+            <tr>
+                <td><label for="uname">Enter Your Name :</label></td>
+                <td><input type="text" name="uname" id="uname"></td>
+            </tr>
+            <tr>
+                <td><label for="umail">Enter your Email Id :</label></td>
+                <td><input type="email" name="umail" id="umail"></td>
+            </tr>
+            <tr>
+                <td><label for="contact">Enter your Contact Number :</label></td>
+                <td><input type="tel" name="contact" id="contact"></td>
+            </tr>
+            <tr>
+                <td><label for="gender">Gender :</label></td>
+                <td>
+                    <input type="radio" name="gender"   value="male" >Male
+                    <input type="radio" name="gender"  value="female">Female                   
+                </td>
+            </tr>
+            <tr>
+                <td><label for="password">Password :</label></td>
+                <td><input type="password" name="password" id="pass"></td>
+            </tr>
+            <tr>
+                <td ><button type="reset" >Refresh</button></td>
+                <td ><button type="submit" >Submit</button></td>
+            </tr>
+            
+        </table>
+    </div>
+</body>
+</html>

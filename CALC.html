@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="./Calculator.js"></script>
+    <title>Calculator</title>
+    <style>
+         .box
+        {
+            border: 2px rgb(7, 252, 19) solid;
+            padding: 20px;
+            margin: auto;
+            width: 400px;
+            background: radial-gradient(rgb(221, 208, 18), transparent);
+        }
+        .but{
+            background: rgb(0, 247, 255);
+            border-radius: 50px;
+        }
+        .res-box{
+            background-color: white;
+            border: 1px solid black;
+            height: 20px;
+            width: 80%;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <table class="box">
+           <form action="" >
+            <tr>
+                <td><label for="val1">Enter Number 1:</label></td>
+                <td><input type="number" id="val1" name="val1" value="12"></td> <!-- Changed value to 12 -->
+            </tr>
+            <tr>
+                <td><label for="val2">Enter Number 2:</label></td>
+                <td><input type="number" id="val2" name="val2" value="8"></td> <!-- Changed value to 8 -->
+            </tr>
+            <tr>
+                <td><label for="result">Result:</label></td>
+                <td><div class="res-box"><label id="res-box" ></label></div></td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <button type="button" class="but" onclick="add()">Add</button>
+                    <button type="button" class="but" onclick="sub()">Sub</button>
+                    <button type="button" class="but" onclick="mul()">Mul</button>
+                    <button type="button" class="but" onclick="div()">Div</button>
+                </td>
+            </tr>
+           </form>
+        </table>
+    </div>
+    <script>
+        function add(){
+            document.getElementById("res-box").innerHTML=parseInt(document.getElementById("val1").value)+parseInt(document.getElementById("val2").value);
+        }
+        function sub(){
+            document.getElementById("res-box").innerHTML=parseInt(document.getElementById("val1").value)-parseInt(document.getElementById("val2").value);
+        
+        }
+        function mul(){
+            document.getElementById("res-box").innerHTML=parseInt(document.getElementById("val1").value)*parseInt(document.getElementById("val2").value);
+        
+        }
+        function div(){
+            if((parseInt(document.getElementById("val2").value))!=0){
+            document.getElementById("res-box").innerHTML=parseInt(document.getElementById("val1").value)/parseInt(document.getElementById("val2").value);
+            }
+            else
+            {
+                document.getElementById("res-box").innerHTML="Number 2 should not 0!"
+
+            }
+        }
+    </script>
+</body>
+</html>
